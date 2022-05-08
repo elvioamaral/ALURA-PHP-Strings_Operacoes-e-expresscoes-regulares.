@@ -2,7 +2,7 @@
 
 namespace App\Alura;
 
-class Usuario
+class Usuarios
 {
     private $nome;
     private $sobrenome;
