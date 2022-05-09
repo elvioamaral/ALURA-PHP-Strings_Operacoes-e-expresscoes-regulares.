@@ -14,7 +14,7 @@ class Contato
         if ($this->validaEmail($email) !== false) {
             $this->setEmail($email);
         } else {
-            $this->setEmail("Email invÃ¡lido.");
+            $this->setEmail("Email inválido.");
         }
         
         $this->endereco = $endereco;
@@ -26,7 +26,7 @@ class Contato
         $posString = strpos($this->email, "@");
 
         if (!$posString) {
-            return "UsuÃ¡rio invÃ¡lido.";
+            return "Usuário inválido.";
         }
 
         return substr($this->email, 0, $posString);
@@ -50,6 +50,6 @@ class Contato
     public function getEnderecoCep(): string
     {
         $enderecoCep = [$this->endereco, $this->cep];
-        return implode(" | ", $enderecoCep);
+        return implode(", ", $enderecoCep);
     }
 }
